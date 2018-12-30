@@ -1,0 +1,432 @@
+/*Sources:
+https://www.youtube.com/watch?v=zBR9qBBM9KA&t=216s
+https://css-tricks.com/things-ive-learned-css-grid-layout/
+https://www.linkedin.com/pulse/how-send-people-directly-sections-your-linkedin-stephan-hovnanian/
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+https://www.w3schools.com/cssref/sel_target.asp
+https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself
+https://www.webdesignerdepot.com/2013/01/how-to-use-any-font-you-like-with-css3/
+https://www.sitepoint.com/pure-css3-paper-curls/
+*/
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: 
+        local('Comfortaa'),
+        url('/Assets/local_fonts/Comfortaa-Regular.ttf')
+        format('truetype');
+    }
+    
+    @font-face {
+    font-family: 'Raleway';
+    src: 
+        local('Raleway'),
+        url('/Assets/local_fonts/Raleway-Regular.ttf')
+        format('truetype');
+    }
+
+    /* Box-shadow syntax: offset-x | offset-y | blur-radius | spread-radius | color. Separate multiple box-shadows with a comma */
+
+body {
+    background-color: #6C9BA7;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto 1fr  1fr 1fr 1fr auto;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    border-style: solid none solid none;
+    border-width: 0.25rem;
+    border-color: #6C9BA7;
+    }
+
+header {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    height: 8vh;
+    background-color: #EA937B;
+}
+
+/* CV SECTIONS AS SINGLE PAGES */
+
+/* SECTION PAGE CONTAINER */
+
+.cv-section {
+    position: relative;
+    background-color: seashell;
+    width: 24rem;
+    height: 32rem;
+    margin: 30px;
+    -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.6);
+	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+/* PAGE-CURL EFFECT */
+
+.cv-section::before, .cv-section::after{
+	position: absolute;
+	width: 40%;
+	height: 10px;
+	content: ' ';
+	left: 12px;
+    bottom: 12px;
+   /* background: transparent; */
+	-webkit-transform: skew(-5deg) rotate(-5deg);
+	-moz-transform: skew(-5deg) rotate(-5deg);
+	-ms-transform: skew(-5deg) rotate(-5deg);
+	-o-transform: skew(-5deg) rotate(-5deg);
+	transform: skew(-5deg) rotate(-5deg);
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+	z-index: -1;
+} 
+
+.cv-section::after {
+	left: auto;
+	right: 12px;
+	-webkit-transform: skew(5deg) rotate(5deg);
+	-moz-transform: skew(5deg) rotate(5deg);
+	-ms-transform: skew(5deg) rotate(5deg);
+	-o-transform: skew(5deg) rotate(5deg);
+	transform: skew(5deg) rotate(5deg);
+}
+
+
+#cv-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-left: 25px;
+    z-index: -1;
+}
+
+.cv-section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 85%;
+}
+
+.cv-section-span {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1 rem;
+    color: #3a372e;
+}
+
+.contact-span {
+    margin: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: #3a372e;
+    font-size: 1.2rem;
+}
+
+/* HEADINGS */
+
+.section-h2 {
+    text-align:center;
+}
+
+#h2-education {
+    margin-top: 0;
+    background-color: #FB7E5D;
+}
+
+#education {
+    grid-column: 3;
+    grid-row: 6;
+    justify-self: center;
+    background-color: seashell;
+}
+
+#h2-skills {
+    background-color: #EA937B;
+    margin-top: 0;
+}
+
+#skills {
+    grid-column: 3;
+    grid-row: 5;
+    justify-self: center;
+    background-color: seashell;
+}
+
+#h2-languages {
+    margin-top: 0;
+    background-color: #F29277;
+}
+
+#languages {
+    grid-column: 4;
+    grid-row: 6;
+    justify-self: center;
+    background-color: seashell;
+}
+
+#h2-portfolio {
+    margin-top: 0;
+    background-color:#F29277;
+}
+
+#h2-work-experience {
+    background-color: #F6936C;
+    margin-top: 0;
+}
+
+#work-experience {
+    grid-column: 4;
+    grid-row: 5;
+    justify-self: center;
+    background-color: seashell;
+}
+
+#h2-contact {
+    background-color: #FB7C53;
+    margin-top: 0;
+}
+
+#contact-me {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    justify-self: center;
+    grid-row: 7;
+    background-color: seashell;
+}
+
+footer {
+    grid-column: 1 / -1;
+    background-color: #FB7E5D;
+    grid-row: 9 / 10;
+    /* position: fixed; */
+    height: 5vh;
+    /* left: 0;
+    bottom: 0;
+    margin: 0 auto; */
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+    color:#1e1f20;
+}
+
+/* ------- 3D BOOK - LARGE SCREENS ------- */
+#page-container {
+    grid-column: 3 / 5;
+    grid-row: 3 / 4;
+    position: relative;
+    margin: 2rem auto 4rem auto;
+    }
+
+.page {
+    top: 50%;
+    background-color: seashell;
+    width: 24rem;
+    height: 32rem;
+    transform: perspective(2000px);
+    transform-style: preserve-3d;
+    -webkit-transition: width 1.2s, transform 1.2s;
+    transition: width 1.2s transform 1.2s;
+    box-shadow: inset 24rem 0 4rem rgba(0, 0, 0, 0.2), 0 2rem  2rem rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+}
+
+/*Cast light across page on hover*/
+
+ /*Add depth to bottom side*/
+.page::before {
+    position: absolute;
+    width: 100%;
+    height: 0.3rem;
+    bottom: -0.3rem;
+    left: 0;
+    content: '';
+    transform-origin: top;
+    transform: skewX(45deg);
+    background-color: rgb(147, 161, 172);
+}
+
+/*Add depth to right side*/
+.page::after {
+    position: absolute;
+    height: 100%;
+    width: 0.3rem;
+    top: 0;
+    right: -0.3rem;
+    content: '';
+    transform-origin: left;
+    transform: skewY(45deg);
+    background-color: rgb(185, 197, 206);
+}
+
+.img-container {
+    /* position: relative; */
+    height: 100%;
+    width: 100%;
+    transform-origin: left;
+    -webkit-transition: 1.2s;
+    transition: width 1.2s, transform 1.2s;
+    z-index: 1;
+}
+
+img {
+    height: 32rem;
+    width: 24rem;
+}
+/* Box-shadow syntax: offset-x | offset-y | blur-radius | spread-radius | color. Separate multiple box-shadows with a comma */
+.page:hover {
+    box-shadow: inset 2rem 0 4rem rgba(0, 0, 0, 0.25), 0 1rem  7rem rgba(0, 0, 0, 0.25);
+    transform: perspective(2000px);
+    -webkit-transition: width 1.2s;
+    transition: width 1.2s, transform 1.2s;
+}
+
+.page:hover #img-container {
+    transform-origin: left;
+    transform: rotateY(-135deg);
+    -webkit-transition: width 1.2s;
+    transition: width 1.2s, transform 1.2s;
+    }
+
+.cv-icons {
+    width: 24px;
+    height: auto;
+}
+
+h1 {
+    font-family: 'Comfortaa', sans-serif;
+    color:#373f43;
+}
+h2 {
+    font-family: 'Raleway', sans-serif;
+    color:#3a372e;
+}
+
+h1, #cv-name {
+    text-align: center;
+    font-weight: 500;
+}
+
+#read-more {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #B66355;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+a, a:visited {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*------------------ MOBILE SCREENS -------------------
+-------------------------------------------------------*/
+
+@media screen and (max-width: 500px) {
+    
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-icons {
+        width: 20px;
+        height: auto;
+    }
+
+    .cv-section {
+        width: 20rem;
+        height: 27rem;
+        margin: 30px auto;
+    }
+    
+    .contact-span {
+        font-size: 0.95rem;
+    }
+
+    #skills {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    #education {
+        grid-column: 1;
+        grid-row: 6;
+    }
+    #work-experience {
+        grid-column: 1;
+        grid-row: 7;
+    }
+
+    /* #portfolio {
+        grid-column: 1;
+        grid-row: 8;
+    } */
+
+    #languages {
+        grid-column: 1;
+        grid-row: 8;
+    }
+
+    #contact-me {
+        grid-column: 1;
+        grid-row: 9;
+    }
+
+    footer {
+        grid-row: 11;
+    }
+
+    /* ------- 3D BOOK- MOBILE SCREENS ------- */
+#page-container {
+        grid-column: 1;
+}   
+
+.page {
+    width: 20rem;
+    height: 27rem;
+    transform: perspective(2000px);
+    box-shadow: inset 20rem 0 4rem -23rem rgba(0, 0, 0, 0.25), 0 2rem  4rem rgba(0, 0, 0, 0.25);
+    /* box-shadow: inset 20rem 0 4rem rgba(0, 0, 0, 0.4), 0 2rem  4rem rgba(0, 0, 0, 0.4); */
+   }
+
+    /* Make 3d right side flush with top in closed cover*/
+.page::after {
+    top: 0.8rem; 
+    height: 97%;   
+}
+
+    /* Make 3d right side flush with top in open cover*/
+.page:hover::after {
+    top: 0rem;    
+    height: 100%;
+}
+
+.img-container {
+    /* height: 100%;
+    width: 100%; */
+    transform-origin: top;
+    -webkit-transition: 1.2s;
+    transition: width 1.2s, transform 1.2s;
+    z-index: 1;
+}
+
+img {
+    height: 27rem;
+    width: 20rem;
+}
+
+.page:hover #img-container {
+    transform-origin: top;
+    transform: rotateX(145deg);
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+}
