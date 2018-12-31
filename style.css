@@ -234,14 +234,22 @@ h1, #cv-name {
     padding: 0 20px 0 20px;
 }
 
-.contact-span {
-    margin: 40px auto;
+#contact-span {
+    margin: 64px auto;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     color: #3a372e;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
 }
 
+#contact-span > a {
+    color: #683b7d;
+}
+
+#contact-span > a:hover {
+    color:#ee7942;
+    font-size: 1.3rem;
+}
 
 footer {
     grid-column: 1 / -1;
