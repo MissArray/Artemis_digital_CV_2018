@@ -7,7 +7,7 @@
 **Cover:**  	    #97d8ca     Riptide
                     (#A1D5AE    Chinook   hsl(135, 38%, 73%)
 **Background:**	    #6C9BA7     Cadet Blue
-**Pages:**          #fff5ee     Seaschell   hsla(25, 100%, 97%)
+**Pages:**          #fff5ee     Seashell   hsla(25, 100%, 97%)
 **Page headings**   #3a372e     TouchWood
 
 ## Icons:

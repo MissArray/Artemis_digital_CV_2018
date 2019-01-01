@@ -117,6 +117,14 @@ header {
     color: #3a372e;
 }
 
+.cv-section-span > a {
+    color: #4B0082;
+}
+
+#cv-section-span > a:hover {
+    color: #279860;
+  }
+
 #FAC-span {
     padding-bottom: 1rem;
     border-bottom: 2px solid #FB7E5D;
@@ -154,6 +162,12 @@ h1, #cv-name {
     font-weight: 500;
 }
 
+/* LISTS */
+ul {
+    margin-top: 4px;
+    margin-left: -25px;
+}
+
 /* SINGLE PAGES */
 .section-h2 {
     text-align:center;
@@ -167,7 +181,7 @@ h1, #cv-name {
 
 #education {
     grid-column: 3;
-    grid-row: 6;
+    grid-row: 5;
     justify-self: center;
     background-color: seashell;
 }
@@ -179,17 +193,17 @@ h1, #cv-name {
 
 #skills {
     grid-column: 3;
-    grid-row: 5;
+    grid-row: 6;
     justify-self: center;
     background-color: seashell;
 }
 
-#h2-languages {
-    margin-top: 0;
+#h2-abilities {
     background-color: #F29277;
+    margin-top: 0;
 }
 
-#languages {
+#abilities{
     grid-column: 4;
     grid-row: 6;
     justify-self: center;
@@ -243,12 +257,11 @@ h1, #cv-name {
 }
 
 #contact-span > a {
-    color: #683b7d;
+    color: #4B0082;
 }
 
 #contact-span > a:hover {
-    color:#ee7942;
-    font-size: 1.3rem;
+    color: #279860;
 }
 
 footer {
@@ -400,12 +413,7 @@ a, a:visited {
         grid-row: 7;
     }
 
-    /* #portfolio {
-        grid-column: 1;
-        grid-row: 8;
-    } */
-
-    #languages {
+    #abilities {
         grid-column: 1;
         grid-row: 8;
     }
