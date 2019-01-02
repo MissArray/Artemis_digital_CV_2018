@@ -25,6 +25,23 @@ https://www.sitepoint.com/pure-css3-paper-curls/
         format('truetype');
     }
 
+    @font-face {
+        font-family: 'Raleway';
+        src: 
+            local('Raleway'),
+            url('/Assets/local_fonts/Raleway-SemiBold.ttf')
+            format('truetype');
+    }
+
+    @font-face {
+        font-family: 'EncodeSansSemiCondensed';
+        src: 
+            local('EncodeSansSemiCondensed'),
+            url('/Assets/local_fonts/EncodeSansSemiCondensed-Medium.ttf')
+            format('truetype');
+    }
+
+
     /* Box-shadow syntax: offset-x | offset-y | blur-radius | spread-radius | color. Separate multiple box-shadows with a comma */
 
 body {
@@ -92,7 +109,6 @@ header {
 	transform: skew(5deg) rotate(5deg);
 }
 
-
 #cv-content {
     position: absolute;
     top: 0;
@@ -106,7 +122,7 @@ header {
 .cv-section-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: first baseline;
     height: 85%;
     padding: 0 40px 0 40px;
 }
@@ -130,6 +146,16 @@ header {
     border-bottom: 2px solid #FB7E5D;
 }
 
+.read-more {
+    width: 16rem;
+    text-align: center;
+    font-family: 'EncodeSansSemiCondensed', sans-serif;
+    font-size: 1rem;
+    background-color: rgb(173, 233, 194);
+    margin: auto auto 0 auto;
+    padding: 4px;
+    border-radius: 14px;
+}
 
 /* IMAGES & ICONS */
 
@@ -156,6 +182,14 @@ h3 {
     color:#3a372e;
     margin-bottom: 4px;
    }
+
+h3 > a {
+    color: #4B0082;
+}
+
+h3 > a:hover {
+    color: #7700cf;
+}
 
 h1, #cv-name {
     text-align: center;
@@ -261,7 +295,7 @@ ul {
 }
 
 #contact-span > a:hover {
-    color: #279860;
+    color: #7700cf;
 }
 
 footer {
@@ -363,7 +397,7 @@ img {
     height: auto;
 }
 
-#read-more {
+#contents-prompt {
     font-size: 1.25rem;
     font-weight: 400;
     color: #B66355;
@@ -396,8 +430,19 @@ a, a:visited {
         margin: 30px auto;
     }
     
+    cv-section-span {
+        font-size: 0.8rem;
+    }
     .contact-span {
         font-size: 0.95rem;
+    }
+
+    .read-more {
+        width: 14rem;
+        text-align: center;
+        font-family: 'EncodeSansSemiCondensed', sans-serif;
+        font-size: 1rem;
+        margin: 16px auto 0 auto;
     }
 
     #skills {
@@ -478,4 +523,9 @@ h1 {
 h2 {
     font-size: 1.25rem;
 }
+
+h3 {
+    font-size: 0.95rem;
+}
+
 }
