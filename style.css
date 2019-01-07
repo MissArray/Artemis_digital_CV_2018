@@ -119,6 +119,15 @@ header {
     z-index: -1;
 }
 
+.cv-content-link {
+    color: #3a372e;
+}
+
+.cv-content-link:hover {
+    color: #6f00ff;
+    font-weight: bold;
+}
+
 .cv-section-content {
     display: flex;
     flex-direction: column;
@@ -133,13 +142,14 @@ header {
     color: #3a372e;
 }
 
-.cv-section-span > a {
+.cv-section-span > h3 {
     color: #4B0082;
 }
 
-#cv-section-span > a:hover {
-    color: #279860;
-  }
+.cv-section-span > a:hover {
+    color: #6f00ff;
+    font-weight: bold;
+}
 
 #FAC-span {
     padding-bottom: 1rem;
@@ -151,10 +161,28 @@ header {
     text-align: center;
     font-family: 'EncodeSansSemiCondensed', sans-serif;
     font-size: 1rem;
-    background-color: rgb(173, 233, 194);
-    margin: auto auto 0 auto;
+    background-color: rgb(168, 231, 196);
+    margin: auto auto 8px auto;
     padding: 4px;
     border-radius: 14px;
+}
+
+.read-more > a {
+    color: #373f43;
+}
+
+.read-more:hover {
+background-color: #b0ff9d;
+border-radius: 1px;
+border: #9dffec solid 1px;
+}
+
+.read-more-inner {
+    color: #4B0082;
+}
+
+.read-more-inner:hover {
+    color: #6f00ff;
 }
 
 /* IMAGES & ICONS */
@@ -232,16 +260,21 @@ ul {
     background-color: seashell;
 }
 
-#h2-abilities {
+#h2-interests {
     background-color: #F29277;
     margin-top: 0;
 }
 
-#abilities{
+#interests{
     grid-column: 4;
     grid-row: 6;
     justify-self: center;
     background-color: seashell;
+}
+
+#interests li a:hover {
+    color: #7700cf;
+    font-weight: bold;
 }
 
 #h2-portfolio {
@@ -296,6 +329,10 @@ ul {
 
 #contact-span > a:hover {
     color: #7700cf;
+    background-color: #b0ff9d;
+    border-radius: 1px;
+    border: #d0ffde solid 1px;
+    padding: 6px 18px;
 }
 
 footer {
@@ -410,6 +447,14 @@ a, a:visited {
     cursor: pointer;
 }
 
+#cv-pdf-link {
+    color:#3a372e;
+}
+
+#cv-pdf-link:hover {
+    color: #6f00ff;
+}
+
 /*------------------ MOBILE SCREENS -------------------
 -------------------------------------------------------*/
 
@@ -429,12 +474,16 @@ a, a:visited {
         height: 27rem;
         margin: 30px auto;
     }
-    
-    cv-section-span {
-        font-size: 0.8rem;
+    .cv-section-content {
+        padding: 0 30px;
     }
+    
+    .cv-section-span {
+        font-size: 0.9rem;
+    }
+
     .contact-span {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
     }
 
     .read-more {
@@ -442,7 +491,7 @@ a, a:visited {
         text-align: center;
         font-family: 'EncodeSansSemiCondensed', sans-serif;
         font-size: 1rem;
-        margin: 16px auto 0 auto;
+        margin: 8px auto 0 auto;
     }
 
     #skills {
@@ -458,7 +507,7 @@ a, a:visited {
         grid-row: 7;
     }
 
-    #abilities {
+    #interests {
         grid-column: 1;
         grid-row: 8;
     }
@@ -466,6 +515,10 @@ a, a:visited {
     #contact-me {
         grid-column: 1;
         grid-row: 9;
+    }
+
+    ul{
+        font-size: 0.9rem;
     }
 
     footer {
