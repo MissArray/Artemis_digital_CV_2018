@@ -200,9 +200,18 @@ h1 {
     color:#373f43;
 }
 
+h1, #cv-name {
+    text-align: center;
+    font-weight: 500;
+}
+
 h2 {
     font-family: 'Raleway', sans-serif;
     color:#3a372e;
+}
+
+.cv-section > h2 {
+    height: 1.6rem;
 }
 
 h3 {
@@ -219,10 +228,6 @@ h3 > a:hover {
     color: #7700cf;
 }
 
-h1, #cv-name {
-    text-align: center;
-    font-weight: 500;
-}
 
 /* LISTS */
 ul {
@@ -525,7 +530,8 @@ a, a:visited {
         grid-row: 11;
     }
 
-    /* ------- 3D BOOK- MOBILE SCREENS ------- */
+    /* ---------- 3D BOOK- MOBILE SCREENS ---------- */
+
 #page-container {
         grid-column: 1;
 }   
@@ -579,6 +585,10 @@ h2 {
 
 h3 {
     font-size: 0.95rem;
+}
+
+.read-more {
+    margin: auto auto 8px auto;
 }
 
 }
