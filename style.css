@@ -64,6 +64,17 @@ header {
     background-color: #EA937B;
 }
 
+header > h1 {
+    color: #52737c;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    font-variant: small-caps;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 0px 1px #52737c;
+}
+
 /* CV SECTIONS AS SINGLE PAGES */
 
 /* SECTION PAGE CONTAINER */
@@ -235,6 +246,7 @@ ul {
 .section-h2 {
     text-align:center;
     margin-bottom: 0;
+    padding: 2px;
 }
 
 #h2-education {
@@ -465,6 +477,10 @@ a, a:visited {
         grid-template-columns: 1fr;
     }
 
+    header > h1 {
+        display: none;
+    }
+
     .cv-icons {
         width: 20px;
         height: auto;
@@ -484,7 +500,7 @@ a, a:visited {
     }
 
     .contact-span {
-        font-size: 0.85rem;
+        font-size: 0.6rem;
     }
 
     .read-more {
