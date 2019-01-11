@@ -89,7 +89,7 @@ header > h1 {
 	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.6);
 }
 
-/* PAGE-CURL EFFECT */
+/* FLIP-PAGE EFFECT */
 
 .cv-section::before, .cv-section::after{
 	position: absolute;
@@ -98,8 +98,7 @@ header > h1 {
 	content: ' ';
 	left: 12px;
     bottom: 12px;
-   /* background: transparent; */
-	-webkit-transform: skew(-5deg) rotate(-5deg);
+ 	-webkit-transform: skew(-5deg) rotate(-5deg);
 	-moz-transform: skew(-5deg) rotate(-5deg);
 	-ms-transform: skew(-5deg) rotate(-5deg);
 	-o-transform: skew(-5deg) rotate(-5deg);
@@ -376,9 +375,9 @@ footer {
     border-radius: 2px;
 }
 
-/*Cast light across page on hover*/
+/*Cast light across page 
+Add depth to bottom side*/
 
- /*Add depth to bottom side*/
 .page::before {
     position: absolute;
     width: 100%;
@@ -405,7 +404,6 @@ footer {
 }
 
 .img-container {
-    /* position: relative; */
     height: 100%;
     width: 100%;
     transform-origin: left;
@@ -551,22 +549,8 @@ a, a:visited {
     /* box-shadow: inset 20rem 0 4rem rgba(0, 0, 0, 0.4), 0 2rem  4rem rgba(0, 0, 0, 0.4); */
    }
 
-    /* Make 3d right side flush with top in closed cover*/
-.page::after {
-    top: 0.8rem; 
-    height: 97%;   
-}
-
-    /* Make 3d right side flush with top in open cover*/
-.page:hover::after {
-    top: 0rem;    
-    height: 100%;
-}
-
 .img-container {
-    /* height: 100%;
-    width: 100%; */
-    transform-origin: top;
+    transform-origin: left;
     -webkit-transition: 1.2s;
     transition: width 1.2s, transform 1.2s;
     z-index: 1;
@@ -577,10 +561,20 @@ img {
     width: 20rem;
 }
 
-.page:hover #img-container {
-    transform-origin: top;
+.page:focus #img-container {
+    transform-origin: left;
     transform: rotateX(145deg);
+    -webkit-transition: width 1.2s;
+    transition: width 1.2s, transform 1.2s;
 }
+
+.page:focus {
+    box-shadow: inset 2rem 0 4rem rgba(0, 0, 0, 0.25), 0 1rem  7rem rgba(0, 0, 0, 0.25);
+    transform: perspective(2000px);
+    -webkit-transition: width 1.2s;
+    transition: width 1.2s, transform 1.2s;
+}
+
 
 h1 {
     font-size: 1.5rem;
@@ -592,6 +586,14 @@ h2 {
 
 h3 {
     font-size: 0.95rem;
+}
+
+a:active {
+    color: #7700cf;
+}
+
+.read-more > a {
+    color: #1E272C;
 }
 
 .read-more {
