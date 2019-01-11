@@ -6,6 +6,10 @@ Applying the same principle to coding skills, I've created a digital CV that ind
 ## See my digital CV at
 https://missarray-cv.netlify.com/
 
+## On mobile screens
+* Tested with dev tools on Firefox, Chrome, Edge.
+* Displays as expected on Android phone.
+
 ## Find out more details on LinkedIn
 https://www.linkedin.com/in/artemis-gause/
 
