@@ -10,32 +10,32 @@ https://www.sitepoint.com/pure-css3-paper-curls/
 */
 
 :root {
-    --body-font: 'Archivo', sans-serif;    
+    --body-font: 'Lato', sans-serif;    
 }
 
-/* @font-face {
-    font-family: 'Comfortaa';
+@font-face {
+    font-family: 'Lato';
     src: 
-        local('Comfortaa'),
-        url('/Assets/local_fonts/Comfortaa-Regular.ttf')
+        local('Lato'),
+        url('/Assets/local_fonts/Lato-Regular.ttf')
         format('truetype');
-    } */
+    }
     
 @font-face {
-    font-family: 'Archivo';
+    font-family: 'Lato';
     src: 
-        local('Archivo'),
-        url('/Assets/local_fonts/Archivo-Regular.ttf')
+        local('Lato'),
+        url('/Assets/local_fonts/Lato-SemiBold.ttf')
         format('truetype');
     }
 
-@font-face {
-        font-family: 'Archivo';
+    @font-face {
+        font-family: 'Lato';
         src: 
-            local('Archivo'),
-            url('/Assets/local_fonts/Archivo-SemiBold.ttf')
+            local('Lato'),
+            url('/Assets/local_fonts/Lato-Medium.ttf')
             format('truetype');
-    }
+        }
 
 @font-face {
         font-family: 'EncodeSansSemiCondensed';
@@ -210,7 +210,7 @@ font-size: 1.2rem;
 h1 {
     font-family: var(--body-font, Arial, Helvetica, sans-serif);
     color:#373f43;
-    font-size: 1
+    font-weight: 500;
 }
 
 h1, #cv-name {
@@ -432,8 +432,8 @@ img {
 .page:hover #img-container {
     transform-origin: left;
     transform: rotateY(-135deg);
-    -webkit-transition: width 1.2s;
-    transition: width 1.2s, transform 1.2s;
+    -webkit-transition: width 1s;
+    transition: width 1s, transform 1s;
 }
 
 .cv-icons {
@@ -444,7 +444,7 @@ img {
 #contents-prompt {
     font-size: 1.25rem;
     font-weight: 400;
-    color: #F7667F;
+    color: rgb(223, 51, 79);
     text-align: center;
     margin-bottom: 30px;
 }
@@ -558,7 +558,6 @@ a, a:visited {
     transform-origin: left;
     -webkit-transition: 1.2s;
     transition: width 1.2s, transform 1.2s;
-    /* z-index: 1; */
 }
 
 img {
