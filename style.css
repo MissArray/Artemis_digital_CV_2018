@@ -49,7 +49,7 @@ https://www.sitepoint.com/pure-css3-paper-curls/
     /* Box-shadow syntax: offset-x | offset-y | blur-radius | spread-radius | color. Separate multiple box-shadows with a comma */
 
 body {
-    background-color: #7A7E7E;
+    background-color: #717171;
     margin: 0;
     padding: 0;
     display: grid;
@@ -58,7 +58,7 @@ body {
     grid-gap: 10px;
     border-style: solid none solid none;
     border-width: 0.25rem;
-    border-color: #7A7E7E;
+    border-color: #717171;
     }
 
 header {
