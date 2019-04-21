@@ -10,7 +10,9 @@ https://www.sitepoint.com/pure-css3-paper-curls/
 */
 
 :root {
-    --body-font: 'Lato', sans-serif;    
+    --body-font: 'Lato', sans-serif; 
+    --main-cool-colour: rgb(9, 228, 228);
+    --main-warm-colour:  rgb(252, 146, 157);
 }
 
 @font-face {
@@ -37,7 +39,7 @@ https://www.sitepoint.com/pure-css3-paper-curls/
             format('truetype');
         }
 
-@font-face {
+    @font-face {
         font-family: 'EncodeSansSemiCondensed';
         src: 
             local('EncodeSansSemiCondensed'),
@@ -65,7 +67,7 @@ header {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     /* height: 8vh; */
-    background-color: rgb(252, 146, 157);
+    background-color: var(--main-warm-colour);
 }
 
 header > h1 {
@@ -177,7 +179,7 @@ header > h1 {
     background-color: #D5F4F4;
     margin: auto auto 8px auto;
     padding: 4px;
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
 .read-more > a {
@@ -266,7 +268,7 @@ ul {
 }
 
 #h2-skills {
-    background-color: rgb(9, 228, 228);
+    background-color: var(--main-cool-colour);
     margin-top: 0;
 }
 
@@ -278,7 +280,7 @@ ul {
 }
 
 #h2-interests {
-    background-color: rgb(252, 146, 157);
+    background-color: var(--main-warm-colour);
     margin-top: 0;
 }
 
@@ -307,7 +309,7 @@ ul {
 }
 
 #h2-contact {
-    background-color: rgb(9, 228, 228);
+    background-color: var(--main-cool-colour);
     margin-top: 0;
 }
 
@@ -342,14 +344,14 @@ ul {
 #contact-span > a:hover {
     color: #7700cf;
     background-color: rgba(154, 228, 228, 0.897);
-    border-radius: 1px;
+    border-radius: 2px;
     border: #d0ffde solid 1px;
     padding: 6px 18px;
 }
 
 footer {
     grid-column: 1 / -1;
-    background-color: #FA8893;
+    background-color: var(--main-warm-colour);
     grid-row: 9 / 10;
     padding: 20px;
     text-align: center;
@@ -424,9 +426,6 @@ img {
 /* Box-shadow syntax: offset-x | offset-y | blur-radius | spread-radius | color. Separate multiple box-shadows with a comma */
 .page:hover {
     box-shadow: inset 2rem 0 4rem rgba(0, 0, 0, 0.25), 0 1rem  7rem rgba(0, 0, 0, 0.25);
-    /* transform: perspective(2000px);
-    -webkit-transition: width 1.2s;
-    transition: width 1.2s, transform 1.2s; */
 }
 
 .page:hover #img-container {
@@ -461,6 +460,116 @@ a, a:visited {
 #cv-pdf-link:hover {
     color: #6f00ff;
 }
+
+/*-----------MODAL - ACCESSIBLE & RESPONSIVE -----------*/
+
+#modal-container {
+    position: absolute;
+    width: 95vw;
+    margin: 0 auto;
+    padding: 8px;
+    font-family: var(--body-font);
+}
+
+#modal-button {
+    display: block;
+    background-color: orange;
+    color: slategray;
+    width: 7rem;
+    height: 7rem;
+    border: 0;
+    border-radius: 50%;
+    margin: 8px;
+    transition: background 0.5s ease-in;
+    font-size: 1.2rem;
+}
+
+#modal-overlay {
+    height: 0;
+    width: 0;
+    padding: 24px;
+    opacity: 0;
+    overflow: hidden;
+    /* In original: 
+    transition: opacity 0.5s ease-in;
+    But this caused X to fade out rather than disappear
+    */
+}
+
+#modal-toggle {
+    position: absolute;
+    left: -999px;           /*In original example set to 0, but this prevented book animation*/
+    top: 0;
+    height: 95vh;
+    width: 95vw;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#modal-button:hover {
+    background-color: lightgreen;
+}
+
+#modal-toggle:checked {
+    width: 95vw;
+    height: 95vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    opacity: 0;
+    cursor: default;
+    pointer-events: none;
+   }
+
+#modal-toggle:checked ~ #modal-overlay {
+    display: flex;
+    background-color: #717171;
+    width: 95vw;
+    height: 95vh;
+    position: fixed;
+    left: 1vw;
+    top: 1vh;
+    margin: 0 auto;
+    padding: 1rem;
+    opacity: 1;
+    z-index: 9;
+    }
+
+#modal-toggle:checked ~ #modal-overlay #modal-content {
+    /* position: absolute; */
+    background-color: aquamarine;
+    width: 90vw;
+    height: 90vh;
+    margin: 0 auto;
+    border-radius: 2px;
+    z-index: 900;
+}
+
+#modal-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+}
+
+#modal-content > h2 {
+    align-self: center;
+}
+
+#modal-content > p {
+    font-size: 1.2rem;
+}
+
+#close-modal {
+    align-self: flex-end;
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+    border: 1px solid #717171;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 
 /*------------------ MOBILE SCREENS -------------------
 -------------------------------------------------------*/
