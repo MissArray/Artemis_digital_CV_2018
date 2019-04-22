@@ -11,8 +11,9 @@ https://www.sitepoint.com/pure-css3-paper-curls/
 
 :root {
     --body-font: 'Lato', sans-serif; 
-    --main-cool-colour: rgb(9, 228, 228);
+    --main-cool-colour: #8bd2e1;
     --main-warm-colour:  rgb(252, 146, 157);
+    --lighter-cool-colour: #16e6e6;
 }
 
 @font-face {
@@ -297,7 +298,7 @@ ul {
 }
 
 #h2-work-experience {
-    background-color: rgb(9, 228, 228);
+    background-color: var(--main-cool-colour);
     margin-top: 0;
 }
 
@@ -473,8 +474,8 @@ a, a:visited {
 
 #modal-button {
     display: block;
-    background-color: orange;
-    color: slategray;
+    background-color: rgba(247, 134, 134, 0.993);
+    color: #1e272c;
     width: 7rem;
     height: 7rem;
     border: 0;
@@ -539,7 +540,7 @@ a, a:visited {
 
 #modal-toggle:checked ~ #modal-overlay #modal-content {
     /* position: absolute; */
-    background-color: aquamarine;
+    background-color: var(--lighter-cool-colour);
     width: 90vw;
     height: 90vh;
     margin: 0 auto;
@@ -563,7 +564,7 @@ a, a:visited {
 
 #close-modal {
     align-self: flex-end;
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 1rem;
     font-size: 2rem;
     border: 1px solid #717171;
     border-radius: 50%;
@@ -649,10 +650,11 @@ a, a:visited {
         grid-row: 11;
     }
 
-    /* ---------- 3D BOOK- MOBILE SCREENS ---------- */
+/* ////////////---- 3D BOOK- MOBILE SCREENS ----///////////// */
 
 #page-container {
         grid-column: 1;
+        margin: 5rem auto 2rem auto;
 }   
 
 .page {
@@ -721,6 +723,19 @@ a:active {
 
 .read-more {
     margin: auto auto 8px auto;
+}
+
+#modal-toggle {
+    left: 0;
+    height: 15vh;
+    cursor: pointer;
+}
+
+#modal-button {
+    width: 5rem;
+    height: 5rem;
+    font-size: 1rem;
+    margin: 2.5rem 1rem;
 }
 
 }
