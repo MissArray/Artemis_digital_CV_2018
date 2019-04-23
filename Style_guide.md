@@ -4,11 +4,11 @@
 
 **Name:** 	        #be3131     Persian Red
 **CV:** 		    #583628     Cioccolato
-**Cover:**  	    #97d8ca     Riptide
-                    (#A1D5AE    Chinook   hsl(135, 38%, 73%)
-**Background:**	    #6C9BA7     Cadet Blue
+
 **Pages:**          #fff5ee     Seashell   hsla(25, 100%, 97%)
 **Page headings**   #3a372e     TouchWood
+**Main warm colour: #fd7a78     Tint of Grapefruit #fd5956
+**Main cool colour: #4fd9d4     Close to medium turquoise
 
 ## Icons:
 1. LinkedIn profile:  LinkedIn icon         ``<i class="fab fa-linkedin"></i>``
