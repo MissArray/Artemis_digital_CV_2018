@@ -6,7 +6,7 @@
 **Name:** 	            #be3131     Persian Red
 **CV:** 		        #583628     Cioccolato
 
-**Pages:**              #fff5ee     Seashell   hsla(25, 100%, 97%)
+**Pages:**              #FDFDF4     Tint of Chilean Heath 
 **Modal bckg:           #A1E1D3     Tint of Riptide (AAA 8.05 vs Touchwood)
 **Page headings**       #3a372e     TouchWood (AAA 11.06 vs Seashell; 10.45 vs Hummingbird;                                               6.66 vs Medium Turquoise; 5.72 vs #fd5956)
 **Link bckg/hover:**    #E0F5ED     Tint of Hummingbird (AA 4.01 as background vs Alizarin)
