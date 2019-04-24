@@ -13,8 +13,8 @@ https://www.sitepoint.com/pure-css3-paper-curls/
     --body-font: 'Lato', sans-serif; 
     --main-cool-colour: #41d6d1;    /* AA and AAA scores */
     --main-warm-colour: #fb9997;    /* AA and AAA scores */
-    --deeper-cool-colour: #005b85;
-    --deeper-warm-colour: #ef735e;  /*Persimmon*/
+    --deeper-cool-colour: #017b92;  /* AA & AAA scores */
+    --deeper-warm-colour: #E32636;  /* AA score for large/bold text*/
     --body-font-colour: #282825;    /* AA and AAA scores */
     }
 
@@ -183,7 +183,7 @@ header > h1 {
     font-family: 'EncodeSansSemiCondensed', sans-serif;
     font-size: 1rem;
     font-weight: 500;
-    background-color: #E9F9F9;
+    background-color: #E0F5ED;
     margin: auto auto 8px auto;
     padding: 4px;
     border-radius: 2px;
@@ -202,7 +202,7 @@ header > h1 {
 }
 
 .read-more-inner:hover {
-    color: #cd363c;
+    color: var(--deeper-warm-colour, salmon);
     font-size: 1.2rem;
 }
 
@@ -353,8 +353,8 @@ ul {
 }
 
 #contact-span > a:hover {
-    color:#c74444;
-    background-color: #E9F9F9;
+    color: var(--deeper-warm-colour, salmon);
+    background-color: #E0F5ED;
     border-radius: 2px;
     border: #d0ffde solid 1px;
     padding: 6px 18px;
@@ -455,7 +455,7 @@ img {
 #contents-prompt {
     font-size: 1.25rem;
     font-weight: 400;
-    color: rgb(223, 51, 79);
+    color: var(--deeper-warm-colour, salmon);
     text-align: center;
     margin-bottom: 30px;
 }
@@ -538,7 +538,7 @@ a, a:visited {
 
 #modal-toggle:checked ~ #modal-overlay {
     display: flex;
-    background-color: var(--main-cool-colour, turquoise);
+    background-color:#A1E1D3; /* Tint of Riptide 8.05*/
     width: 95vw;
     height: 95vh;
     position: fixed;
@@ -552,7 +552,7 @@ a, a:visited {
 
 #modal-toggle:checked ~ #modal-overlay #modal-content {
     /* position: absolute; */
-    background-color: var(--lighter-cool-colour);
+    /* background-color: var(--lighter-cool-colour); */
     width: 90vw;
     height: 90vh;
     margin: 0 auto;
