@@ -178,19 +178,24 @@ header > h1 {
 }
 
 .read-more {
-    width: 16rem;
-    text-align: center;
+    display: flex;
+    width: 24rem;
+    justify-content: center;
     font-family: 'EncodeSansSemiCondensed', sans-serif;
     font-size: 1rem;
     font-weight: 500;
-    background-color: #E0F5ED;
-    margin: auto auto 8px auto;
-    padding: 4px;
+    margin: auto -35px 8px -35px;
+    padding: 4px 0;
+    border-width: 0;
     border-radius: 2px;
 }
 
 .read-more > a {
+    width: 100%;
+    text-align: center;
     color: var(--body-font-colour, black);
+    background-color: #E0F5ED;
+    padding: 4px 0;
 }
 
 .read-more:hover {
@@ -199,7 +204,7 @@ header > h1 {
 
 .read-more-inner {
     color: #045C91;
-}
+    }
 
 .read-more-inner:hover {
     color: var(--deeper-warm-colour, salmon);
@@ -336,11 +341,14 @@ ul {
     flex-direction: column;
     justify-content: center;
     height: 85%;
-    padding: 0 20px 0 20px;
+    padding: 0;
 }
 
 #contact-span {
-    margin: 64px auto;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 64px 0;
     font-family: var(--body-font, Arial, Helvetica, sans-serif);
     font-weight: 500;
     color: #1e272c;
@@ -348,14 +356,15 @@ ul {
 }
 
 #contact-span > a {
+    text-align: center;
     color: var(--deeper-cool-colour, darkturquoise); 
 }
 
 #contact-span > a:hover {
+    width: 100%;
     color: var(--deeper-warm-colour, salmon);
     background-color: #E0F5ED;
     border-radius: 2px;
-    border: #d0ffde solid 1px;
     padding: 6px 18px;
     font-size: 1.4rem;
     }
@@ -624,11 +633,15 @@ a, a:visited {
     }
 
     .read-more {
-        width: 14rem;
+        width: 20rem;
         text-align: center;
         font-family: 'EncodeSansSemiCondensed', sans-serif;
         font-size: 1rem;
-        margin: 8px auto 0 auto;
+        margin: auto -30px 8px -30px;
+    }
+
+    .read-more > a {
+        margin-left: -60px;
     }
 
     #skills {
