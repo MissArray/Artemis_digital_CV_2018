@@ -143,9 +143,8 @@ header > h1 {
     color: var(--body-font-colour, black);
 }
 
-.cv-content-link:hover {
+.cv-content-link:hover, .cv-content-link:focus {
     color: var(--deeper-warm-colour, salmon);
-    font-weight: bold;
 }
 
 .cv-section-content {
@@ -168,7 +167,7 @@ header > h1 {
 .cv-section-span > a {
     color: var(--deeper-cool-colour, darkturquoise);
 }
-.cv-section-span > a:hover {
+.cv-section-span > a:hover, .cv-section-span > a:focus {
     color: var(--deeper-warm-colour, salmon);
     }
 
@@ -198,7 +197,7 @@ header > h1 {
     padding: 4px 0;
 }
 
-.read-more:hover {
+.read-more:hover, .read-more:focus {
     font-size: 1.2rem;
 }
 
@@ -206,7 +205,7 @@ header > h1 {
     color: #045C91;
     }
 
-.read-more-inner:hover {
+.read-more-inner:hover, .read-more-inner:focus {
     color: var(--deeper-warm-colour, salmon);
     font-size: 1.2rem;
 }
@@ -249,7 +248,7 @@ h3 > a {
     color: var(--deeper-cool-colour, darkturquoise);
 }
 
-h3 > a:hover {
+h3 > a:hover, h3 > a:focus {
     color: var(--deeper-warm-colour, salmon);
 }
 
@@ -307,7 +306,7 @@ ul {
     color: var(--deeper-cool-colour, darkturquoise);
 }
 
-#interests li a:hover {
+#interests li a:hover, #interests li a:focus {
     color: var(--deeper-warm-colour, salmon);
 }
 
@@ -360,7 +359,7 @@ ul {
     color: var(--deeper-cool-colour, darkturquoise); 
 }
 
-#contact-span > a:hover {
+#contact-span > a:hover, #contact-span > a:focus {
     width: 100%;
     color: var(--deeper-warm-colour, salmon);
     background-color: #E0F5ED;
@@ -504,7 +503,7 @@ a, a:visited {
     font-size: 1.2rem;
 }
 
-#modal-button:hover {
+#modal-button:hover, #modal-button:focus {
     background-color: #A1E1D3;
     cursor: pointer;
 }
@@ -534,7 +533,7 @@ a, a:visited {
 
 #modal-toggle:checked {
     width: 95vw;
-    height: 95vh;
+    height: 98vh;
     position: fixed;
     left: 0;
     top: 0;
@@ -733,9 +732,9 @@ h3 {
     font-size: 0.95rem;
 }
 
-a:active {
+/* a:active {
     color: #7700cf;
-}
+} */
 
 .read-more > a {
     color: var(--body-font-colour, black);
@@ -758,6 +757,10 @@ a:active {
     height: 5rem;
     font-size: 1rem;
     margin: 2.5rem 1rem;
+}
+
+#modal-button:hover, #modal-button:focus {
+    background-color: #A1E1D3;
 }
 
 }
