@@ -732,6 +732,8 @@ a:active {
     margin: auto auto 8px auto;
 }
 
+/*----------MODAL BEHAVIOUR ON MOBILE SCREENS----------*/
+
 #modal-toggle {
     left: 0;
     height: 15vh;
