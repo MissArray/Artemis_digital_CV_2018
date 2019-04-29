@@ -215,7 +215,10 @@ header > h1 {
 #envelope {
     width: 124px;
     height: auto;
-    margin: 0 auto;
+    margin: 2rem auto 2rem -64px;    /*Set 'position' to 'absolute', left to 50% and 'left margin' to 1/2 of icon width to centre element*/
+    position: absolute;
+    top: 5rem;
+    left: 50%;
 }
 
 /* HEADINGS */
@@ -344,10 +347,12 @@ ul {
 }
 
 #contact-span {
+    position: relative;
+    top: 2rem;
     display: flex;
     width: 100%;
     justify-content: center;
-    margin: 64px 0;
+    margin: 0 auto;
     font-family: var(--body-font, Arial, Helvetica, sans-serif);
     font-weight: 500;
     color: #1e272c;
@@ -357,6 +362,7 @@ ul {
 #contact-span > a {
     text-align: center;
     color: var(--deeper-cool-colour, darkturquoise); 
+    margin-top: 2rem;
 }
 
 #contact-span > a:hover, #contact-span > a:focus {
@@ -584,10 +590,11 @@ a, a:visited {
 
 #close-modal {
     align-self: flex-end;
-    padding: 0.1rem 0.6rem;
+    padding: 0.2rem 0.8rem;
     font-size: 2rem;
-    border: 1px solid #717171;
+    background-color: #83cfbf;
     border-radius: 50%;
+    border: solid #6dd1bb 3px;
     cursor: pointer;
 }
 
@@ -627,8 +634,8 @@ a, a:visited {
         font-size: 0.9rem;
     }
 
-    .contact-span {
-        font-size: 0.6rem;
+    #contact-span > a {
+        margin-top: 4rem;
     }
 
     .read-more {

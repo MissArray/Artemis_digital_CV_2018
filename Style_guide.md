@@ -3,8 +3,6 @@
 ## Colour contrast checked for accessibility on https://contrast-ratio.com
 ## Colours
 
-**Name:** 	            #be3131     Persian Red
-**CV:** 		        #583628     Cioccolato
 
 **Pages:**              #FDFDF4     Tint of Chilean Heath 
 **Modal bckg:           #A1E1D3     Tint of Riptide (AAA 8.05 vs Touchwood)
