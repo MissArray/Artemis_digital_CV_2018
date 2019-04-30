@@ -268,7 +268,7 @@ h3 > a:hover, h3 > a:focus {
 }
 
 
-/* LISTS */
+/* LISTS - CV */
 ul {
     margin-top: 4px;
     margin-left: -25px;
@@ -592,16 +592,36 @@ a, a:visited {
     overflow-y: scroll;
 }
 
+#modal-content a {
+    color: #00578c;
+}
+
+.modal-section > ul {
+    margin: 1rem 5rem 0.5rem 3rem;
+}
+
+.modal-section p {
+    font-size: 1rem;
+    padding-left: 1rem;
+    margin: 1rem 5rem 0.5rem 3rem;
+}
+
 #modal-h1 {
     text-align: start;
     /* width: 95vw; */
     font-weight: 600;
     background-color: #fba0a9;
     padding: 0.5rem 0rem 0.5rem 1.85rem;
+    letter-spacing: 0.09rem;
+    margin: 1rem 5rem 0.5rem 3rem;
+    border: solid #fcb0b8;
+    border-width: 0.3rem 1.2rem 1.2rem 0.3rem;
     }
 
 .modal-h2 {
     font-weight: 600;
+    letter-spacing: 0.09rem;
+    margin: 1rem 5rem 0.5rem 3rem;
 }
 
 #modal-h2-present {
@@ -612,6 +632,7 @@ a, a:visited {
     background-repeat: no-repeat;
     text-align: center;
     padding: 3.5rem 0.8rem 3rem 0.3rem;
+    margin: 1rem 5rem 0.5rem 3rem;
 }
 
 #modal-h2-past {
@@ -621,7 +642,8 @@ a, a:visited {
     background-size: contain;
     background-repeat: no-repeat;
     text-align: center;
-    padding: 3.25rem 0.5rem 1rem 3.5rem;
+    padding: 3.26rem 0.5rem 1rem 3.5rem;
+    margin: 1rem 5rem 0.5rem 3.5rem;
 }
 
 #modal-h2-future {
@@ -631,7 +653,8 @@ a, a:visited {
     background-size: contain;
     background-repeat: no-repeat;
     text-align: center;
-    padding: 3.27rem 3.5rem 1rem 1.2rem;
+    padding: 3.28rem 3.5rem 1rem 1.2rem;
+    margin: 1rem 5rem 0.5rem 3.5rem;
 }
 
 .modal-h3 {
@@ -639,11 +662,8 @@ a, a:visited {
     font-weight: 500;
     background-color: #c1d7d7;
     padding: 1rem;
-    border-radius: 3px;
-}
-
-#modal-content > p {
-    font-size: 1.2rem;
+    border-radius: 2px;
+    margin: 1rem 5rem 0.5rem 3rem;
 }
 
 #close-modal {
@@ -792,6 +812,7 @@ img {
 
 h1 {
     font-size: 1.424rem;
+    border-radius: 1px;
 }
 
 h2 {
@@ -841,5 +862,17 @@ ul{
     font-size: 0.889rem;
 }
 
+.modal-section > ul, .modal-section > p, .modal-h3 {
+    margin: 1rem auto;
+    padding: 0.2rem;
+}  
+
+#modal-h1 {
+    margin: 2rem 0 1rem 0;
+}
+
+#modal-h2-present, #modal-h2-past, #modal-h2-future {
+    margin: 0.5rem 1rem 0.5rem 0.5rem;
+}
 
 }
