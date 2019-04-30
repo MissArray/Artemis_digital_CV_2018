@@ -11,6 +11,7 @@ https://www.sitepoint.com/pure-css3-paper-curls/
 
 :root {
     --body-font: 'Lato', sans-serif; 
+    --semi-bold-txt: 'Archivo', sans-serif; /*Semibold - weight: 500*/
     --main-cool-colour: #41d6d1;    /* AA and AAA scores */
     --main-warm-colour: #fb9997;    /* AA and AAA scores */
     --deeper-cool-colour: #017b92;  /* AA & AAA scores */
@@ -49,6 +50,14 @@ https://www.sitepoint.com/pure-css3-paper-curls/
             local('EncodeSansSemiCondensed'),
             url('/Assets/local_fonts/EncodeSansSemiCondensed-Medium.ttf')
             format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Archivo';
+        src:
+        local('Archivo'),
+        url('/Assets/local_fonts/Archivo-Medium.ttf')
+        format('truetype');
     }
 
 
@@ -520,7 +529,7 @@ a, a:visited {
 #modal-overlay {
     height: 0;
     width: 0;
-    padding: 24px;
+    padding: 1rem 0;
     opacity: 0;
     overflow: hidden;
     /* In original: 
@@ -554,14 +563,15 @@ a, a:visited {
 
 #modal-toggle:checked ~ #modal-overlay {
     display: flex;
-    background-color:#A1E1D3; /* Tint of Riptide 8.05*/
+    background-color: #ccd3d3;
+    /* background-color:#A1E1D3; Tint of Riptide 8.05 */
     width: 95vw;
     height: 95vh;
     position: fixed;
     left: 1vw;
     top: 1vh;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
     opacity: 1;
     z-index: 9;
     }
@@ -579,23 +589,23 @@ a, a:visited {
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem;
-    /* font-family: var(--body-font, Arial, Helvetica, sans-serif); */
     overflow-y: scroll;
 }
 
-#modal-content > h1 {
-    align-self: center;
+#modal-h1 {
+    text-align: start;
+    /* width: 95vw; */
     font-weight: 600;
-}
+    background-color: #fba0a9;
+    padding: 0.5rem 0rem 0.5rem 1.85rem;
+    }
 
 .modal-h2 {
     font-weight: 600;
 }
 
 #modal-h2-present {
-    background: url(/Images/Modal-shape-circle.svg);
-    background-repeat: repeat;
-    background-size: auto;
+    background: url(/Images/Modal-circle.svg);
     height: 4rem;
     width: 8rem;
     background-size: contain;
@@ -604,9 +614,33 @@ a, a:visited {
     padding: 3.5rem 0.8rem 3rem 0.3rem;
 }
 
-/* .modal-h3 {
+#modal-h2-past {
+    background: url(/Images/Modal-triangle-LF.svg);
+    height: 4rem;
+    width: 8rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 3.25rem 0.5rem 1rem 3.5rem;
+}
+
+#modal-h2-future {
+    background: url(/Images/Modal-triangle-RT.svg);
+    height: 4rem;
+    width: 8rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 3.27rem 3.5rem 1rem 1.2rem;
+}
+
+.modal-h3 {
+    font-family: var(--semi-bold-txt, Arial, Helvetica, sans-serif);
     font-weight: 500;
-} */
+    background-color: #c1d7d7;
+    padding: 1rem;
+    border-radius: 3px;
+}
 
 #modal-content > p {
     font-size: 1.2rem;
@@ -616,9 +650,9 @@ a, a:visited {
     align-self: flex-end;
     padding: 0.2rem 0.8rem;
     font-size: 2.074rem;
-    background-color: #83cfbf;
+    background-color: #71d5da;
     border-radius: 50%;
-    border: solid #6dd1bb 3px;
+    border: solid #7ed9de 4px;
     cursor: pointer;
 }
 
@@ -782,11 +816,15 @@ h3 {
 
 /*----------MODAL BEHAVIOUR ON MOBILE SCREENS----------*/
 
+#modal-toggle:checked ~ #modal-overlay {
+    padding: 1rem 0;
+}
+
 #modal-toggle {
     left: 0;
     height: 15vh;
     cursor: pointer;
-}
+    }
 
 #modal-button {
     width: 5rem;
