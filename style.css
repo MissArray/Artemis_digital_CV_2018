@@ -135,7 +135,7 @@ header > h1 {
     left: 0;
     box-sizing: border-box;
     padding: 1rem;
-    margin-left: 25px;
+    margin-left: 3.5rem;
     z-index: -1;
 }
 
@@ -226,6 +226,7 @@ header > h1 {
 h1 {
     font-family: var(--body-font, Arial, Helvetica, sans-serif);
     color: var(--body-font-colour, black);
+    font-size: 1.728rem;
     font-weight: 500;
 }
 
@@ -237,6 +238,7 @@ h1, #cv-name {
 h2 {
     font-family: var(--body-font, Arial, Helvetica, sans-serif);
     color: var(--body-font-colour, black);
+    font-size: 1.44rem;
     font-weight: 500;
 }
 
@@ -244,6 +246,7 @@ h3 {
     font-family: var(--body-font, Arial, Helvetica, sans-serif);
     color: var(--body-font-colour, black);
     margin-bottom: 4px;
+    font-size: 1.2rem;
     font-weight: 500;
    }
 
@@ -371,7 +374,7 @@ ul {
     background-color: #E0F5ED;
     border-radius: 2px;
     padding: 6px 18px;
-    font-size: 1.4rem;
+    font-size: 1.44rem;
     }
 
 footer {
@@ -381,7 +384,7 @@ footer {
     padding: 20px;
     text-align: center;
     font-family: var(--body-font, Arial, Helvetica, sans-serif);
-    font-size: 0.9rem;
+    font-size: 0.833rem;
     font-weight: 400;
     color: var(--body-font-colour, black);
 }
@@ -493,7 +496,7 @@ a, a:visited {
     width: 95vw;
     margin: 0 auto;
     padding: 8px;
-    font-family: var(--body-font);
+    font-family: var(--body-font, Arial, Helvetica, sans-serif);
 }
 
 #modal-button {
@@ -576,7 +579,8 @@ a, a:visited {
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem;
-    font-family: var(--body-font, Arial, Helvetica, sans-serif);
+    /* font-family: var(--body-font, Arial, Helvetica, sans-serif); */
+    overflow-y: scroll;
 }
 
 #modal-content > h1 {
@@ -584,19 +588,40 @@ a, a:visited {
     font-weight: 600;
 }
 
+.modal-h2 {
+    font-weight: 600;
+}
+
+#modal-h2-present {
+    background: url(/Images/Modal-shape-circle.svg);
+    background-repeat: repeat;
+    background-size: auto;
+    height: 4rem;
+    width: 8rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 3.5rem 0.8rem 3rem 0.3rem;
+}
+
+/* .modal-h3 {
+    font-weight: 500;
+} */
+
 #modal-content > p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 #close-modal {
     align-self: flex-end;
     padding: 0.2rem 0.8rem;
-    font-size: 2rem;
+    font-size: 2.074rem;
     background-color: #83cfbf;
     border-radius: 50%;
     border: solid #6dd1bb 3px;
     cursor: pointer;
 }
+
 
 
 /*------------------ MOBILE SCREENS -------------------
@@ -616,6 +641,10 @@ a, a:visited {
         display: none;
     }
 
+    #cv-content {
+        margin-left: 1.5rem;
+    }
+
     .cv-icons {
         width: 20px;
         height: auto;
@@ -631,7 +660,7 @@ a, a:visited {
     }
     
     .cv-section-span {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     #contact-span > a {
@@ -674,7 +703,7 @@ a, a:visited {
     }
 
     ul{
-        font-size: 0.9rem;
+        font-size: 0.833rem;
     }
 
     footer {
@@ -728,15 +757,15 @@ img {
 
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 1.424rem;
 }
 
 h2 {
-    font-size: 1.2rem;
+    font-size: 1.266rem;
 }
 
 h3 {
-    font-size: 0.95rem;
+    font-size: 1.125rem;
 }
 
 /* a:active {
@@ -762,12 +791,17 @@ h3 {
 #modal-button {
     width: 5rem;
     height: 5rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
     margin: 2.5rem 1rem;
 }
 
 #modal-button:hover, #modal-button:focus {
     background-color: #A1E1D3;
 }
+
+ul{
+    font-size: 0.889rem;
+}
+
 
 }

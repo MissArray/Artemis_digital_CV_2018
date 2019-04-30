@@ -21,3 +21,22 @@
 6. Education:         Mortar Board          ``<i class="fa fa-graduation-cap"></i>``
 7. Contact Details:   telephone receiver    ``<i class="fa fa-phone"></i>``
 8. Download my CV:    PDF icon              ``<i class="fas fa-file-pdf"></i>``
+
+## Fonts scaled on https://type-scale.com/
+
+**Scale applied - Large screens: 1.200 - Minor Third**
+*Basis=body text: 1rem
+*H1: 1.728rem
+*H2: 1.44rem
+*H3: 1.2rem
+*Small text: 0.833rem
+*large text: 2.074rem
+
+
+**Scale applied - Mobile screens: 1.125 - Major Second**
+*Basis=body text: 1rem
+*H1: 1.424rem
+*H2: 1.266rem
+*H3: 1.125rem
+*large text: 1.602rem
+*footer/small text: 0.889rem
