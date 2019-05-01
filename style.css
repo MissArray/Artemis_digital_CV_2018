@@ -1,12 +1,5 @@
 /*Sources:
-https://www.youtube.com/watch?v=zBR9qBBM9KA&t=216s
-https://css-tricks.com/things-ive-learned-css-grid-layout/
-https://www.linkedin.com/pulse/how-send-people-directly-sections-your-linkedin-stephan-hovnanian/
-https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
-https://www.w3schools.com/cssref/sel_target.asp
-https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself
-https://www.webdesignerdepot.com/2013/01/how-to-use-any-font-you-like-with-css3/
-https://www.sitepoint.com/pure-css3-paper-curls/
+NB Include dot in paths for Chrome and Edge: Chrome finds some, but not all fonts and images when the dot is omitted, even though the folder is a sibling of the CSS.
 */
 
 :root {
@@ -24,7 +17,7 @@ https://www.sitepoint.com/pure-css3-paper-curls/
     font-family: 'Lato';
     src: 
         local('Lato'),
-        url('/Assets/local_fonts/Lato-Regular.ttf')
+        url('./Assets/local_fonts/Lato-Regular.ttf')
         format('truetype');
     }
     
@@ -32,7 +25,7 @@ https://www.sitepoint.com/pure-css3-paper-curls/
     font-family: 'Lato';
     src: 
         local('Lato'),
-        url('/Assets/local_fonts/Lato-SemiBold.ttf')
+        url('./Assets/local_fonts/Lato-SemiBold.ttf')
         format('truetype');
     }
 
@@ -40,7 +33,7 @@ https://www.sitepoint.com/pure-css3-paper-curls/
         font-family: 'Lato';
         src: 
             local('Lato'),
-            url('/Assets/local_fonts/Lato-Medium.ttf')
+            url('./Assets/local_fonts/Lato-Medium.ttf')
             format('truetype');
         }
 
@@ -48,7 +41,7 @@ https://www.sitepoint.com/pure-css3-paper-curls/
         font-family: 'EncodeSansSemiCondensed';
         src: 
             local('EncodeSansSemiCondensed'),
-            url('/Assets/local_fonts/EncodeSansSemiCondensed-Medium.ttf')
+            url('./Assets/local_fonts/EncodeSansSemiCondensed-Medium.ttf')
             format('truetype');
     }
 
@@ -56,7 +49,7 @@ https://www.sitepoint.com/pure-css3-paper-curls/
         font-family: 'Archivo';
         src:
         local('Archivo'),
-        url('/Assets/local_fonts/Archivo-Medium.ttf')
+        url('./Assets/local_fonts/Archivo-Medium.ttf')
         format('truetype');
     }
 
@@ -607,16 +600,19 @@ a, a:visited {
 }
 
 #modal-h1 {
-    text-align: start;
-    /* width: 95vw; */
+    text-align: center;
+    font-size: 2.074rem;
     font-weight: 600;
-    background-color: #fba0a9;
-    padding: 0.5rem 0rem 0.5rem 1.85rem;
-    letter-spacing: 0.09rem;
-    margin: 1rem 5rem 0.5rem 3rem;
-    border: solid #fcb0b8;
+    background: url(./Images/Modal-oblong.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: #fba0a9;
+    border: solid #fcb0b8; */
     border-width: 0.3rem 1.2rem 1.2rem 0.3rem;
-    }
+    padding: 2rem 4rem;
+    letter-spacing: 0.1rem;
+    margin: 1rem 5rem 0.5rem 3rem;
+}
 
 .modal-h2 {
     font-weight: 600;
@@ -625,7 +621,7 @@ a, a:visited {
 }
 
 #modal-h2-present {
-    background: url(/Images/Modal-circle.svg);
+    background: url(./Images/Modal-circle.svg);
     height: 4rem;
     width: 8rem;
     background-size: contain;
@@ -636,7 +632,7 @@ a, a:visited {
 }
 
 #modal-h2-past {
-    background: url(/Images/Modal-triangle-LF.svg);
+    background: url(./Images/Modal-triangle-LF.svg);
     height: 4rem;
     width: 8rem;
     background-size: contain;
@@ -647,7 +643,7 @@ a, a:visited {
 }
 
 #modal-h2-future {
-    background: url(/Images/Modal-triangle-RT.svg);
+    background: url(./Images/Modal-triangle-RT.svg);
     height: 4rem;
     width: 8rem;
     background-size: contain;
@@ -868,6 +864,7 @@ ul{
 }  
 
 #modal-h1 {
+    font-size: 1.602rem;
     margin: 2rem 0 1rem 0;
 }
 
