@@ -159,7 +159,7 @@ header {
     color: var(--deeper-cool-colour, darkturquoise);
 }
 .cv-section-span > a:hover, .cv-section-span > a:focus {
-    color: var(--deeper-warm-colour, salmon);
+    border-bottom: solid 2px var(--main-warm-colour, lightcoral);
     }
 
 #FAC-span {
@@ -304,7 +304,8 @@ ul {
 }
 
 #interests li a:hover, #interests li a:focus {
-    color: var(--deeper-warm-colour, salmon);
+    /* color: var(--deeper-warm-colour, salmon); */
+    border-bottom: solid 2px var(--main-warm-colour, lightcoral);
 }
 
 #h2-work-experience {
