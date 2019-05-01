@@ -31,6 +31,7 @@
 *H3: 1.2rem
 *Small text: 0.833rem
 *large text: 2.074rem
+*XXL text:
 
 
 **Scale applied - Mobile screens: 1.125 - Major Second**

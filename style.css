@@ -73,21 +73,10 @@ header {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     /* height: 8vh; */
-    background-color: var(--main-warm-colour, lightcoral);
+    /* background-color: var(--main-warm-colour, lightcoral); */
 }
 
-header > h1 {
-    color: #E7E7E7;
-    font-family: var(--body-font, Arial, Helvetica, sans-serif);
-    font-size: 1.2rem;
-    font-variant: small-caps;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: 1px;
-    /* text-shadow: 0px 0.01rem #52737c; */
-}
-
-/* CV SECTIONS AS SINGLE PAGES */
+/*-------CV SECTIONS AS SINGLE PAGES-------*/
 
 /* SECTION PAGE CONTAINER */
 
@@ -383,7 +372,7 @@ footer {
     grid-column: 1 / -1;
     background-color: var(--main-warm-colour, lightcoral);
     grid-row: 9 / 10;
-    padding: 20px;
+    padding: 1rem;
     text-align: center;
     font-family: var(--body-font, Arial, Helvetica, sans-serif);
     font-size: 0.833rem;
@@ -587,6 +576,11 @@ a, a:visited {
 
 #modal-content a {
     color: #00578c;
+    font-weight: 500;
+}
+
+#modal-content a:hover, #modal-content a:focus {
+    border-bottom: solid 2px var(--main-warm-colour, lightcoral);
 }
 
 .modal-section > ul {
@@ -597,6 +591,10 @@ a, a:visited {
     font-size: 1rem;
     padding-left: 1rem;
     margin: 1rem 5rem 0.5rem 3rem;
+}
+
+.modal-section:nth-of-type(3) {
+    padding-bottom: 3rem;       /*give some room to the 'Future' section*/
 }
 
 #modal-h1 {
@@ -611,7 +609,7 @@ a, a:visited {
     border-width: 0.3rem 1.2rem 1.2rem 0.3rem;
     padding: 2rem 4rem;
     letter-spacing: 0.1rem;
-    margin: 1rem 5rem 0.5rem 3rem;
+    margin: 2rem 5rem 2rem 3rem;
 }
 
 .modal-h2 {
@@ -672,6 +670,10 @@ a, a:visited {
     cursor: pointer;
 }
 
+#close-modal:hover, #close-modal:focus {
+    background-color: #FBA0A9;
+}
+
 
 
 /*------------------ MOBILE SCREENS -------------------
@@ -684,11 +686,9 @@ a, a:visited {
     }
 
     header {
-        height: 5vh;
-    }
-
-    header > h1 {
-        display: none;
+        height: 2vh;
+        background-color: var(--main-cool-colour, turquoise);
+        margin-bottom: 4vh;
     }
 
     #cv-content {
@@ -862,6 +862,10 @@ ul{
     margin: 1rem auto;
     padding: 0.2rem;
 }  
+
+.modal-section:nth-of-type(3) {
+    padding-bottom: 2rem;       /*give some room to the 'Future' section*/
+}
 
 #modal-h1 {
     font-size: 1.602rem;
