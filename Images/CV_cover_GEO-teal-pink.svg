@@ -32,13 +32,13 @@
 	<path class="st8" d="M61.3,30.9"/>
 	<ellipse class="st9" cx="41.5" cy="61.3" rx="18" ry="18.4"/>
 	<g>
-		<text transform="matrix(0.9798 0 0 1 33.4014 64.8109)" class="st10 st11">CV</text>
+		<text transform="matrix(0.9798 0 0 1 33.4014 64.8105)" class="st10 st11">CV</text>
 	</g>
 	<polygon class="st12" points="62.1,23.7 62,34 21.8,58.1 21.8,8.4 	"/>
 	<g>
-		<text transform="matrix(0.9798 0 0 1 29.5239 38.5931)" class="st10 st11">Gause</text>
+		<text transform="matrix(0.9798 0 0 1 29.5234 38.5933)" class="st10 st11">Gause</text>
 	</g>
-	<text transform="matrix(0.9798 0 0 1 26.939 26.8563)" class="st10 st11">Artemis</text>
+	<text transform="matrix(0.9798 0 0 1 26.939 26.8564)" class="st10 st11">Artemis</text>
 </g>
 <g id="Layer_2" class="st13">
 </g>

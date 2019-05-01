@@ -1,23 +1,23 @@
 /*Sources:
-https://www.youtube.com/watch?v=zBR9qBBM9KA&t=216s
-https://css-tricks.com/things-ive-learned-css-grid-layout/
-https://www.linkedin.com/pulse/how-send-people-directly-sections-your-linkedin-stephan-hovnanian/
-https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
-https://www.w3schools.com/cssref/sel_target.asp
-https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself
-https://www.webdesignerdepot.com/2013/01/how-to-use-any-font-you-like-with-css3/
-https://www.sitepoint.com/pure-css3-paper-curls/
+NB Include dot in paths for Chrome and Edge: Chrome finds some, but not all fonts and images when the dot is omitted, even though the folder is a sibling of the CSS.
 */
 
 :root {
-    --body-font: 'Lato', sans-serif;    
-}
+    --body-font: 'Lato', sans-serif; 
+    --semi-bold-txt: 'Archivo', sans-serif; /*Semibold - weight: 500*/
+    --main-cool-colour: #41d6d1;    /* AA and AAA scores */
+    --main-warm-colour: #fb9997;    /* AA and AAA scores */
+    --deeper-cool-colour: #017b92;  /* AA & AAA scores */
+    --deeper-warm-colour: #E32636;  /* AA score for large/bold text*/
+    --body-font-colour: #282825;    /* AA and AAA scores */
+    --page-background:  #FDFDF4;
+    }
 
 @font-face {
     font-family: 'Lato';
     src: 
         local('Lato'),
-        url('/Assets/local_fonts/Lato-Regular.ttf')
+        url('./Assets/local_fonts/Lato-Regular.ttf')
         format('truetype');
     }
     
@@ -25,7 +25,7 @@ https://www.sitepoint.com/pure-css3-paper-curls/
     font-family: 'Lato';
     src: 
         local('Lato'),
-        url('/Assets/local_fonts/Lato-SemiBold.ttf')
+        url('./Assets/local_fonts/Lato-SemiBold.ttf')
         format('truetype');
     }
 
@@ -33,16 +33,24 @@ https://www.sitepoint.com/pure-css3-paper-curls/
         font-family: 'Lato';
         src: 
             local('Lato'),
-            url('/Assets/local_fonts/Lato-Medium.ttf')
+            url('./Assets/local_fonts/Lato-Medium.ttf')
             format('truetype');
         }
 
-@font-face {
+    @font-face {
         font-family: 'EncodeSansSemiCondensed';
         src: 
             local('EncodeSansSemiCondensed'),
-            url('/Assets/local_fonts/EncodeSansSemiCondensed-Medium.ttf')
+            url('./Assets/local_fonts/EncodeSansSemiCondensed-Medium.ttf')
             format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Archivo';
+        src:
+        local('Archivo'),
+        url('./Assets/local_fonts/Archivo-Medium.ttf')
+        format('truetype');
     }
 
 
@@ -65,27 +73,16 @@ header {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     /* height: 8vh; */
-    background-color: rgb(252, 146, 157);
+    /* background-color: var(--main-warm-colour, lightcoral); */
 }
 
-header > h1 {
-    color: #E7E7E7;
-    font-family: var(--body-font, Arial, Helvetica, sans-serif);
-    font-size: 1.2rem;
-    font-variant: small-caps;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: 1px;
-    /* text-shadow: 0px 0.01rem #52737c; */
-}
-
-/* CV SECTIONS AS SINGLE PAGES */
+/*-------CV SECTIONS AS SINGLE PAGES-------*/
 
 /* SECTION PAGE CONTAINER */
 
 .cv-section {
     position: relative;
-    background-color: seashell;
+    background-color: var(--page-background, seashell);
     width: 24rem;
     height: 32rem;
     margin: 30px;
@@ -129,24 +126,23 @@ header > h1 {
     left: 0;
     box-sizing: border-box;
     padding: 1rem;
-    margin-left: 25px;
+    margin-left: 3.5rem;
     z-index: -1;
 }
 
 .cv-content-link {
-    color: #1e272c;
+    color: var(--body-font-colour, black);
 }
 
-.cv-content-link:hover {
-    color: #6f00ff;
-    font-weight: bold;
+.cv-content-link:hover, .cv-content-link:focus {
+    color: var(--deeper-warm-colour, salmon);
 }
 
 .cv-section-content {
     display: flex;
     flex-direction: column;
     justify-content: first baseline;
-    height: 85%;
+    height: 90%;
     padding: 0 35px 0 35px;
 }
 
@@ -156,13 +152,15 @@ header > h1 {
 }
 
 .cv-section-span > h3 {
-    color: #4B0082;
+    color: #28201c;
 }
 
-.cv-section-span > a:hover {
-    color: #6f00ff;
-    font-weight: bold;
+.cv-section-span > a {
+    color: var(--deeper-cool-colour, darkturquoise);
 }
+.cv-section-span > a:hover, .cv-section-span > a:focus {
+    color: var(--deeper-warm-colour, salmon);
+    }
 
 #FAC-span {
     padding-bottom: 1rem;
@@ -170,31 +168,37 @@ header > h1 {
 }
 
 .read-more {
-    width: 16rem;
-    text-align: center;
+    display: flex;
+    width: 24rem;
+    justify-content: center;
     font-family: 'EncodeSansSemiCondensed', sans-serif;
     font-size: 1rem;
-    background-color: #D5F4F4;
-    margin: auto auto 8px auto;
-    padding: 4px;
-    border-radius: 3px;
+    font-weight: 500;
+    margin: auto -35px 8px -35px;
+    padding: 4px 0;
+    border-width: 0;
+    border-radius: 2px;
 }
 
 .read-more > a {
-    color: #1E272C;
+    width: 100%;
+    text-align: center;
+    color: var(--body-font-colour, black);
+    background-color: #E0F5ED;
+    padding: 4px 0;
 }
 
-.read-more:hover {
-background-color: rgba(154, 228, 228, 0.897);
-font-size: 1.2rem;
+.read-more:hover, .read-more:focus {
+    font-size: 1.2rem;
 }
 
 .read-more-inner {
-    color: #4B0082;
-}
+    color: #045C91;
+    }
 
-.read-more-inner:hover {
-    color: #6f00ff;
+.read-more-inner:hover, .read-more-inner:focus {
+    color: var(--deeper-warm-colour, salmon);
+    font-size: 1.2rem;
 }
 
 /* IMAGES & ICONS */
@@ -202,14 +206,18 @@ font-size: 1.2rem;
 #envelope {
     width: 124px;
     height: auto;
-    margin: 0 auto;
+    margin: 2rem auto 2rem -64px;    /*Set 'position' to 'absolute', left to 50% and 'left margin' to 1/2 of icon width to centre element*/
+    position: absolute;
+    top: 5rem;
+    left: 50%;
 }
 
 /* HEADINGS */
 
 h1 {
     font-family: var(--body-font, Arial, Helvetica, sans-serif);
-    color:#373f43;
+    color: var(--body-font-colour, black);
+    font-size: 1.728rem;
     font-weight: 500;
 }
 
@@ -220,27 +228,29 @@ h1, #cv-name {
 
 h2 {
     font-family: var(--body-font, Arial, Helvetica, sans-serif);
-    color:#1e272c;
+    color: var(--body-font-colour, black);
+    font-size: 1.44rem;
     font-weight: 500;
 }
 
 h3 {
     font-family: var(--body-font, Arial, Helvetica, sans-serif);
-    color: #1e272c;
+    color: var(--body-font-colour, black);
     margin-bottom: 4px;
+    font-size: 1.2rem;
     font-weight: 500;
    }
 
 h3 > a {
-    color: #4B0082;
+    color: var(--deeper-cool-colour, darkturquoise);
 }
 
-h3 > a:hover {
-    color: #7700cf;
+h3 > a:hover, h3 > a:focus {
+    color: var(--deeper-warm-colour, salmon);
 }
 
 
-/* LISTS */
+/* LISTS - CV */
 ul {
     margin-top: 4px;
     margin-left: -25px;
@@ -255,18 +265,18 @@ ul {
 
 #h2-education {
     margin-top: 0;
-    background-color: rgb(252, 146, 157);
+    background-color: var(--main-warm-colour, lightcoral);
 }
 
 #education {
     grid-column: 3;
     grid-row: 5;
     justify-self: center;
-    background-color: seashell;
+    background-color: var(--page-background, seashell);
 }
 
 #h2-skills {
-    background-color: rgb(9, 228, 228);
+    background-color: var(--main-cool-colour, turquoise);
     margin-top: 0;
 }
 
@@ -274,11 +284,11 @@ ul {
     grid-column: 3;
     grid-row: 6;
     justify-self: center;
-    background-color: seashell;
+    background-color: var(--page-background, seashell);
 }
 
 #h2-interests {
-    background-color: rgb(252, 146, 157);
+    background-color: var(--main-warm-colour, lightcoral);
     margin-top: 0;
 }
 
@@ -286,16 +296,19 @@ ul {
     grid-column: 4;
     grid-row: 6;
     justify-self: center;
-    background-color: seashell;
+    background-color: var(--page-background, seashell);
 }
 
-#interests li a:hover {
-    color: #7700cf;
-    font-weight: bold;
+#interests li a {
+    color: var(--deeper-cool-colour, darkturquoise);
+}
+
+#interests li a:hover, #interests li a:focus {
+    color: var(--deeper-warm-colour, salmon);
 }
 
 #h2-work-experience {
-    background-color: rgb(9, 228, 228);
+    background-color: var(--main-cool-colour, turquoise);
     margin-top: 0;
 }
 
@@ -303,11 +316,11 @@ ul {
     grid-column: 4;
     grid-row: 5;
     justify-self: center;
-    background-color: seashell;
+    background-color: var(--page-background, seashell);
 }
 
 #h2-contact {
-    background-color: rgb(9, 228, 228);
+    background-color: var(--main-cool-colour, turquoise);
     margin-top: 0;
 }
 
@@ -316,7 +329,7 @@ ul {
     grid-column-end: 5;
     justify-self: center;
     grid-row: 7;
-    background-color: seashell;
+    background-color: var(--page-background, seashell);
 }
 
 #contact-content {
@@ -324,39 +337,47 @@ ul {
     flex-direction: column;
     justify-content: center;
     height: 85%;
-    padding: 0 20px 0 20px;
+    padding: 0;
 }
 
 #contact-span {
-    margin: 64px auto;
+    position: relative;
+    top: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
     font-family: var(--body-font, Arial, Helvetica, sans-serif);
     font-weight: 500;
     color: #1e272c;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
 }
 
 #contact-span > a {
-    color: #4B0082;
+    text-align: center;
+    color: var(--deeper-cool-colour, darkturquoise); 
+    margin-top: 2rem;
 }
 
-#contact-span > a:hover {
-    color: #7700cf;
-    background-color: rgba(154, 228, 228, 0.897);
-    border-radius: 1px;
-    border: #d0ffde solid 1px;
+#contact-span > a:hover, #contact-span > a:focus {
+    width: 100%;
+    color: var(--deeper-warm-colour, salmon);
+    background-color: #E0F5ED;
+    border-radius: 2px;
     padding: 6px 18px;
-}
+    font-size: 1.44rem;
+    }
 
 footer {
     grid-column: 1 / -1;
-    background-color: #FA8893;
+    background-color: var(--main-warm-colour, lightcoral);
     grid-row: 9 / 10;
-    padding: 20px;
+    padding: 1rem;
     text-align: center;
     font-family: var(--body-font, Arial, Helvetica, sans-serif);
-    font-size: 0.9rem;
+    font-size: 0.833rem;
     font-weight: 400;
-    color:#1e1f20;
+    color: var(--body-font-colour, black);
 }
 
 /* ------- 3D BOOK - LARGE SCREENS ------- */
@@ -369,7 +390,7 @@ footer {
 
 .page {
     top: 50%;
-    background-color: seashell;
+    background-color: var(--page-background, seashell);
     width: 24rem;
     height: 32rem;
     transform: perspective(2000px);
@@ -424,9 +445,6 @@ img {
 /* Box-shadow syntax: offset-x | offset-y | blur-radius | spread-radius | color. Separate multiple box-shadows with a comma */
 .page:hover {
     box-shadow: inset 2rem 0 4rem rgba(0, 0, 0, 0.25), 0 1rem  7rem rgba(0, 0, 0, 0.25);
-    /* transform: perspective(2000px);
-    -webkit-transition: width 1.2s;
-    transition: width 1.2s, transform 1.2s; */
 }
 
 .page:hover #img-container {
@@ -442,9 +460,9 @@ img {
 }
 
 #contents-prompt {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 400;
-    color: rgb(223, 51, 79);
+    color: var(--deeper-warm-colour, salmon);
     text-align: center;
     margin-bottom: 30px;
 }
@@ -455,12 +473,208 @@ a, a:visited {
 }
 
 #cv-pdf-link {
-    color:#1e272c;
+    color: var(--body-font-colour, black);
 }
 
 #cv-pdf-link:hover {
-    color: #6f00ff;
+    color: var(--deeper-warm-colour, salmon);
 }
+
+/*-----------MODAL - ACCESSIBLE & RESPONSIVE -----------*/
+
+#modal-container {
+    position: absolute;
+    width: 95vw;
+    margin: 0 auto;
+    padding: 8px;
+    font-family: var(--body-font, Arial, Helvetica, sans-serif);
+}
+
+#modal-button {
+    display: block;
+    background-color: var(--main-warm-colour, lightcoral);
+    color: var(--body-font-colour, black);
+    width: 7rem;
+    height: 7rem;
+    border: 0;
+    border-radius: 50%;
+    margin: 8px;
+    transition: background 0.2s ease-in;
+    font-size: 1.2rem;
+}
+
+#modal-button:hover, #modal-button:focus {
+    background-color: #A1E1D3;
+    cursor: pointer;
+}
+
+#modal-overlay {
+    height: 0;
+    width: 0;
+    padding: 1rem 0;
+    opacity: 0;
+    overflow: hidden;
+    /* In original: 
+    transition: opacity 0.5s ease-in;
+    But this caused X to fade out rather than disappear
+    */
+}
+
+#modal-toggle {
+    position: absolute;
+    left: -999px;           /*In original example set to 0, but this prevented book animation*/
+    top: 0;
+    height: 15vh;
+    width: 95vw;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#modal-toggle:checked {
+    width: 95vw;
+    height: 98vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    opacity: 0;
+    cursor: default;
+    pointer-events: none;
+   }
+
+#modal-toggle:checked ~ #modal-overlay {
+    display: flex;
+    background-color: #ccd3d3;
+    /* background-color:#A1E1D3; Tint of Riptide 8.05 */
+    width: 95vw;
+    height: 95vh;
+    position: fixed;
+    left: 1vw;
+    top: 1vh;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    opacity: 1;
+    z-index: 9;
+    }
+
+#modal-toggle:checked ~ #modal-overlay #modal-content {
+    /* position: absolute; */
+    width: 90vw;
+    height: 90vh;
+    margin: 0 auto;
+    border-radius: 2px;
+    z-index: 900;
+}
+
+#modal-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    overflow-y: scroll;
+}
+
+#modal-content a {
+    color: #00578c;
+    font-weight: 500;
+}
+
+#modal-content a:hover, #modal-content a:focus {
+    border-bottom: solid 2px var(--main-warm-colour, lightcoral);
+}
+
+.modal-section > ul {
+    margin: 1rem 5rem 0.5rem 3rem;
+}
+
+.modal-section p {
+    font-size: 1rem;
+    padding-left: 1rem;
+    margin: 1rem 5rem 0.5rem 3rem;
+}
+
+.modal-section:nth-of-type(3) {
+    padding-bottom: 3rem;       /*give some room to the 'Future' section*/
+}
+
+#modal-h1 {
+    text-align: center;
+    font-size: 2.074rem;
+    font-weight: 600;
+    background: url(./Images/Modal-oblong.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: #fba0a9;
+    border: solid #fcb0b8; */
+    border-width: 0.3rem 1.2rem 1.2rem 0.3rem;
+    padding: 2rem 4rem;
+    letter-spacing: 0.1rem;
+    margin: 2rem 5rem 2rem 3rem;
+}
+
+.modal-h2 {
+    font-weight: 600;
+    letter-spacing: 0.09rem;
+    margin: 1rem 5rem 0.5rem 3rem;
+}
+
+#modal-h2-present {
+    background: url(./Images/Modal-circle.svg);
+    height: 4rem;
+    width: 8rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 3.5rem 0.8rem 3rem 0.3rem;
+    margin: 1rem 5rem 0.5rem 3rem;
+}
+
+#modal-h2-past {
+    background: url(./Images/Modal-triangle-LF.svg);
+    height: 4rem;
+    width: 8rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 3.26rem 0.5rem 1rem 3.5rem;
+    margin: 1rem 5rem 0.5rem 3.5rem;
+}
+
+#modal-h2-future {
+    background: url(./Images/Modal-triangle-RT.svg);
+    height: 4rem;
+    width: 8rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 3.28rem 3.5rem 1rem 1.2rem;
+    margin: 1rem 5rem 0.5rem 3.5rem;
+}
+
+.modal-h3 {
+    font-family: var(--semi-bold-txt, Arial, Helvetica, sans-serif);
+    font-weight: 500;
+    background-color: #c1d7d7;
+    padding: 1rem;
+    border-radius: 2px;
+    margin: 1rem 5rem 0.5rem 3rem;
+}
+
+#close-modal {
+    align-self: flex-end;
+    padding: 0.2rem 0.8rem;
+    font-size: 2.074rem;
+    background-color: #71d5da;
+    border-radius: 50%;
+    border: solid #7ed9de 4px;
+    cursor: pointer;
+}
+
+#close-modal:hover, #close-modal:focus {
+    background-color: #FBA0A9;
+}
+
+
 
 /*------------------ MOBILE SCREENS -------------------
 -------------------------------------------------------*/
@@ -472,11 +686,13 @@ a, a:visited {
     }
 
     header {
-        height: 5vh;
+        height: 2vh;
+        background-color: var(--main-cool-colour, turquoise);
+        margin-bottom: 4vh;
     }
 
-    header > h1 {
-        display: none;
+    #cv-content {
+        margin-left: 1.5rem;
     }
 
     .cv-icons {
@@ -494,19 +710,23 @@ a, a:visited {
     }
     
     .cv-section-span {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
-    .contact-span {
-        font-size: 0.6rem;
+    #contact-span > a {
+        margin-top: 4rem;
     }
 
     .read-more {
-        width: 14rem;
+        width: 20rem;
         text-align: center;
         font-family: 'EncodeSansSemiCondensed', sans-serif;
         font-size: 1rem;
-        margin: 8px auto 0 auto;
+        margin: auto -30px 8px -30px;
+    }
+
+    .read-more > a {
+        margin-left: -60px;
     }
 
     #skills {
@@ -533,17 +753,18 @@ a, a:visited {
     }
 
     ul{
-        font-size: 0.9rem;
+        font-size: 0.833rem;
     }
 
     footer {
         grid-row: 11;
     }
 
-    /* ---------- 3D BOOK- MOBILE SCREENS ---------- */
+/* ////////////---- 3D BOOK- MOBILE SCREENS ----///////////// */
 
 #page-container {
         grid-column: 1;
+        margin: 5rem auto 2rem auto;
 }   
 
 .page {
@@ -574,15 +795,10 @@ img {
 
 .page:focus {
     box-shadow: inset 2rem 0 4rem rgba(0, 0, 0, 0.25), 0 1rem  7rem rgba(0, 0, 0, 0.25);
-    /* transform: perspective(2000px); */
-    /* -webkit-transition: width 1.2s; */
-    /* transition: width 1.2s, transform 1.2s; */
 }
 
 /*----REPLACE PAGE-FLIP WITH SCALE-TO-INVISIBILITY EFFECT TO PRESERVE CLICKABLE LINKS----*/
 .page:hover #img-container {
-    /* transform-origin: left;
-    transform: rotateY(-135deg); */
     -webkit-transform: scale(0.001, 0.001);
     transform: scale(0.001, 0.001);
     -webkit-transition: transform 1.2s;
@@ -591,27 +807,73 @@ img {
 
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 1.424rem;
+    border-radius: 1px;
 }
 
 h2 {
-    font-size: 1.25rem;
+    font-size: 1.266rem;
 }
 
 h3 {
-    font-size: 0.95rem;
+    font-size: 1.125rem;
 }
 
-a:active {
+/* a:active {
     color: #7700cf;
-}
+} */
 
 .read-more > a {
-    color: #1E272C;
+    color: var(--body-font-colour, black);
 }
 
 .read-more {
     margin: auto auto 8px auto;
+}
+
+/*----------MODAL BEHAVIOUR ON MOBILE SCREENS----------*/
+
+#modal-toggle:checked ~ #modal-overlay {
+    padding: 1rem 0;
+}
+
+#modal-toggle {
+    left: 0;
+    height: 15vh;
+    cursor: pointer;
+    }
+
+#modal-button {
+    width: 5rem;
+    height: 5rem;
+    font-size: 1.125rem;
+    margin: 2.5rem 1rem;
+}
+
+#modal-button:hover, #modal-button:focus {
+    background-color: #A1E1D3;
+}
+
+ul{
+    font-size: 0.889rem;
+}
+
+.modal-section > ul, .modal-section > p, .modal-h3 {
+    margin: 1rem auto;
+    padding: 0.2rem;
+}  
+
+.modal-section:nth-of-type(3) {
+    padding-bottom: 2rem;       /*give some room to the 'Future' section*/
+}
+
+#modal-h1 {
+    font-size: 1.602rem;
+    margin: 2rem 0 1rem 0;
+}
+
+#modal-h2-present, #modal-h2-past, #modal-h2-future {
+    margin: 0.5rem 1rem 0.5rem 0.5rem;
 }
 
 }
