@@ -67,13 +67,12 @@ body {
     border-style: solid none solid none;
     border-width: 0.25rem;
     border-color: #717171;
+    cursor: url('./Images/cursor-arrow5.png'), default;
     }
 
 header {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
-    /* height: 8vh; */
-    /* background-color: var(--main-warm-colour, lightcoral); */
 }
 
 /*-------CV SECTIONS AS SINGLE PAGES-------*/
