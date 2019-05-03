@@ -3,11 +3,14 @@ Stating in a CV that you're fluent in a language is mere information. As a multi
 
 Applying the same principle to coding skills, I've created a digital CV that indicates how far I've progressed into web-design territory from my starting point as a copy-editor in July 2018 - and how much I enjoy applying and experimenting with what I learn.
 
-## See my digital CV at
+## Website
 https://artemis-gause-cv.netlify.com/
 
-## On mobile screens
-* Tested with dev tools on Firefox, Chrome, Edge.
+## Screen tests
+* Displays as expected on large screens on Firefox, Chrome, Edge.
+* Displays as expected on small screens when tested with dev tools on Firefox, Chrome, Edge.
+* All over the place on IE (also as expected).
+* Custom cursor supported on Firefox and Chrome.
 * Displays as expected on Android phone.
 
 ## Find out more details on LinkedIn
