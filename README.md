@@ -19,3 +19,8 @@ https://www.linkedin.com/in/artemis-gause/
 ## Graphics
 * All icons: https://fontawesome.com/  (modified)
 * Book, notebook, individual pages: © Artemis Gause
+
+## Lo-fi wireframes
+![wireframes](https://github.com/MissArray/Artemis_digital_CV_2018/blob/master/Lo-fi_wireframes.jpg)
+
+
