@@ -286,6 +286,14 @@ ul {
     background-color: var(--page-background, seashell);
 }
 
+#skills li a {
+    color: var(--deeper-cool-colour, darkturquoise);
+}
+
+#skills li a:hover, #skills li a:focus {
+    border-bottom: solid 2px var(--main-warm-colour, lightcoral);
+}
+
 #h2-interests {
     background-color: var(--main-warm-colour, lightcoral);
     margin-top: 0;
@@ -303,7 +311,6 @@ ul {
 }
 
 #interests li a:hover, #interests li a:focus {
-    /* color: var(--deeper-warm-colour, salmon); */
     border-bottom: solid 2px var(--main-warm-colour, lightcoral);
 }
 
@@ -718,11 +725,13 @@ a, a:visited {
     }
 
     .read-more {
+        position: absolute;
+        bottom: 6px;
         width: 20rem;
         text-align: center;
         font-family: 'EncodeSansSemiCondensed', sans-serif;
         font-size: 1rem;
-        margin: auto -30px 8px -30px;
+        margin: auto -30px 6px -30px;
     }
 
     .read-more > a {
