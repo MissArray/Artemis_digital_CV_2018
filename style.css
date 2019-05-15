@@ -251,8 +251,7 @@ h3 > a:hover, h3 > a:focus {
 
 /* LISTS - CV */
 ul {
-    margin-top: 4px;
-    margin-left: -25px;
+    margin: 4px 0px 4px -25px;
 }
 
 /* SINGLE PAGES */
@@ -324,6 +323,14 @@ ul {
     grid-row: 5;
     justify-self: center;
     background-color: var(--page-background, seashell);
+}
+
+#work-experience li a {
+    color: var(--deeper-cool-colour, darkturquoise);
+}
+
+#work-experience li a:hover, #work-experience li a:focus {
+    border-bottom: solid 2px var(--main-warm-colour, lightcoral);
 }
 
 #h2-contact {
@@ -726,12 +733,12 @@ a, a:visited {
 
     .read-more {
         position: absolute;
-        bottom: 6px;
+        bottom: 4px;
         width: 20rem;
         text-align: center;
         font-family: 'EncodeSansSemiCondensed', sans-serif;
         font-size: 1rem;
-        margin: auto -30px 6px -30px;
+        margin: 4px -30px 4px -30px;
     }
 
     .read-more > a {
@@ -826,6 +833,7 @@ h2 {
 
 h3 {
     font-size: 1.125rem;
+    margin: 0.75rem auto 0 auto;
 }
 
 /* a:active {
