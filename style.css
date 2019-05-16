@@ -62,7 +62,7 @@ body {
     padding: 0;
     display: grid;
     grid-template-columns: auto 1fr  1fr 1fr 1fr auto;
-    grid-template-rows: auto;
+    grid-template-rows: auto;              
     grid-gap: 10px;
     border-style: solid none solid none;
     border-width: 0.25rem;
@@ -124,8 +124,8 @@ header {
     top: 0;
     left: 0;
     box-sizing: border-box;
-    padding: 1rem;
-    margin-left: 3.5rem;
+    padding: 1rem 0.5rem;
+    margin-left: 2rem;
     z-index: -1;
 }
 
@@ -706,7 +706,7 @@ a, a:visited {
     }
 
     #cv-content {
-        margin-left: 1.5rem;
+        margin-left: 1rem;
     }
 
     .cv-icons {
@@ -788,8 +788,7 @@ a, a:visited {
     height: 27rem;
     transform: perspective(2000px);
     box-shadow: inset 20rem 0 4rem -23rem rgba(0, 0, 0, 0.25), 0 2rem  4rem rgba(0, 0, 0, 0.25);
-    /* box-shadow: inset 20rem 0 4rem rgba(0, 0, 0, 0.4), 0 2rem  4rem rgba(0, 0, 0, 0.4); */
-   }
+}
 
 .img-container {
     transform-origin: left;
@@ -800,7 +799,7 @@ a, a:visited {
 img {
     height: 27rem;
     width: 20rem;
- }
+}
 
 .page:focus #img-container {
     transform-origin: left;
@@ -835,10 +834,6 @@ h3 {
     font-size: 1.125rem;
     margin: 0.75rem auto 0 auto;
 }
-
-/* a:active {
-    color: #7700cf;
-} */
 
 .read-more > a {
     color: var(--body-font-colour, black);
