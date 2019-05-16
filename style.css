@@ -82,6 +82,7 @@ header {
 .cv-section {
     position: relative;
     background-color: var(--page-background, seashell);
+    background-color: seashell;
     width: 24rem;
     height: 32rem;
     margin: 30px;
@@ -405,6 +406,7 @@ footer {
 .page {
     top: 50%;
     background-color: var(--page-background, seashell);
+    background-color: seashell;
     width: 24rem;
     height: 32rem;
     transform: perspective(2000px);

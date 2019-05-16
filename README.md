@@ -9,7 +9,7 @@ https://artemis-gause-cv.netlify.com/
 ## Screen tests
 * Displays as expected on large screens on Firefox, Chrome, Edge.
 * Displays as expected on small screens when tested with dev tools on Firefox, Chrome, Edge.
-* All over the place on IE (also as expected).
+* All over the place on IE (also as expected). Autoprefixer didn't work. I added minimal fixes to the CSS so that the page contents are at least readable on IE11.
 * Custom cursor supported on Firefox and Chrome.
 * Displays as expected on Android phone.
 
