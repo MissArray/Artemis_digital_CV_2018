@@ -1,10 +1,13 @@
-# Artemis_digital_CV_2018
+# Artemis - Digital CV 2019
 Stating in a CV that you're fluent in a language is mere information. As a multilingual career-changer, I am aware that it's only when you come to speak and write in a new language that you can truly demonstrate how fluent you are. 
 
-Applying the same principle to coding skills, I've created a digital CV that indicates how far I've progressed into web-design territory from my starting point as a copy-editor in July 2018 - and how much I enjoy applying and experimenting with what I learn.
+Applying the same principle to coding skills, I've created a digital CV that indicates how far I've progressed into web-design territory from my starting point as a copy-editor in July 2018 with subminimal coding skills - and how much I enjoy applying and experimenting with what I learn.
 
 ## Website
 https://artemis-gause-cv.netlify.com/
+
+## Notes & resources
+View them [here](https://hackmd.io/6ZS_jxNYSWCtehq0V4jDRw) or see the `Notes.txt` file in this repo.
 
 ## Screen tests
 * Displays as expected on large screens on Firefox, Chrome, Edge.
