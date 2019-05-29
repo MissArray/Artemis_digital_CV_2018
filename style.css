@@ -70,6 +70,11 @@ body {
     cursor: url('./Images/cursor-arrow1.png'), default;
     }
 
+body ::selection {
+    color: #1458eb;             /*Shade of Azul*/
+    background: #e5ff80;        /*Tint of Electric Lime*/
+}    
+
 header {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
