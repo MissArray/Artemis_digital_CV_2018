@@ -658,7 +658,7 @@ a, a:visited {
     background-repeat: no-repeat;
     text-align: center;
     padding: 3.26rem 0.5rem 1rem 3.5rem;
-    margin: 1rem 5rem 0.5rem 3.5rem;
+    margin: 3rem 5rem 0.5rem 3.5rem;
 }
 
 #modal-h2-future {
@@ -669,6 +669,17 @@ a, a:visited {
     background-repeat: no-repeat;
     text-align: center;
     padding: 3.28rem 3.5rem 1rem 1.2rem;
+    margin: 3rem 5rem 0.5rem 3.5rem;
+}
+
+#modal-h2-PS {
+    background: url(./Images/double-circle.svg);
+    height: 4rem;
+    width: 8rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 3.28rem 1.5rem 1rem 0.75rem;
     margin: 1rem 5rem 0.5rem 3.5rem;
 }
 
@@ -700,7 +711,7 @@ a, a:visited {
 /*------------------ MOBILE SCREENS -------------------
 -------------------------------------------------------*/
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
     
     body {
         grid-template-columns: 1fr;
