@@ -24,17 +24,7 @@
 
 ## Fonts scaled on https://type-scale.com/
 
-**Scale applied - Large screens: 1.200 - Minor Third**
-*Basis=body text: 1rem
-*H1: 1.728rem
-*H2: 1.44rem
-*H3: 1.2rem
-*Small text: 0.833rem
-*large text: 2.074rem
-*XXL text:
-
-
-**Scale applied - Mobile screens: 1.125 - Major Second**
+**Scale applied - Major Second**
 *Basis=body text: 1rem
 *H1: 1.424rem
 *H2: 1.266rem
